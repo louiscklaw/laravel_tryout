@@ -1,0 +1,14 @@
+# ./docker-compose.yml
+
+version: '3'
+
+services:
+  web:
+    image: mattrayner/lamp:latest-1604-php7
+    container_name: php7
+    volumes:
+      - ./app/:/app
+    ports:
+      - "8001:80"
+    # stdin_open: true
+    # tty: true
