@@ -1,0 +1,3 @@
+[submodule "jobbook_welltech_prod"]
+	path = jobbook_welltech_prod
+	url = git@bitbucket.org:kmwong/jobbook_welltech_prod.git
