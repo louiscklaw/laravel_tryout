@@ -17,3 +17,7 @@ Route::get('/', function () {
 
 
     include 'test_route.php';
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
