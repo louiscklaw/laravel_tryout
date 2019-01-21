@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
+
 
 Route::get('/test', function(){
     $flights = App\Flight::all();
@@ -7,6 +9,7 @@ Route::get('/test', function(){
     $acc_string = array();
     foreach($flights as $flight)
     {
-        echo $flight->test_field1;
+        echo Auth::user();
+
     }
 });
