@@ -13,8 +13,8 @@ CWD = os.path.dirname(__file__)
 DOCKER_DIR = os.path.join(CWD,'_docker')
 
 def docker_compose_restart():
-    with lcd(CWD):
-        local('docker cp ./_settings/000-default.conf laravel-tryout:/etc/apache2/sites-available/000-default.conf')
+    with lcd(DOCKER_DIR):
+        local('docker cp ./_settings/000-default.conf laravel-php7:/etc/apache2/sites-available/000-default.conf')
         # local('docker cp ./_settings/apache2.conf laravel-tryout:/etc/apache2/sites-available/000-default.conf')
         local('docker-compose restart')
         print('restart done')
