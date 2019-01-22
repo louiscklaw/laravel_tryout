@@ -10,6 +10,9 @@ RUN apt-get update && \
 ENV PHP_UPLOAD_MAX_FILESIZE 50M
 ENV PHP_POST_MAX_SIZE 50M
 
+WORKDIR /app
+
 # respect the port and command by the image
 EXPOSE 80 3306
+
 CMD ["/run.sh"]

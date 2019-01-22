@@ -20,7 +20,7 @@ def docker_compose_restart():
         print('restart done')
 
 
-def reprovision_docker():
+def rebuild_docker():
     with lcd(DOCKER_DIR):
             local('docker-compose kill')
             local('docker-compose down')
