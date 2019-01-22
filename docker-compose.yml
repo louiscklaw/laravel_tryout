@@ -5,7 +5,7 @@ version: '3'
 services:
   web:
     image: mattrayner/lamp:latest-1604-php7
-    container_name: php7
+    container_name: laravel-php7
     volumes:
       - ./app/:/app
     ports:
