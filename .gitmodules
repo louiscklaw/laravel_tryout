@@ -1,6 +1,6 @@
 [submodule "jobbook_welltech_prod"]
 	path = jobbook_welltech_prod
 	url = git@bitbucket.org:kmwong/jobbook_welltech_prod.git
-[submodule "AdminBSBMaterialDesign"]
-	path = AdminBSBMaterialDesign
+[submodule "_ref/AdminBSBMaterialDesign"]
+	path = _ref/AdminBSBMaterialDesign
 	url = git@github.com:gurayyarar/AdminBSBMaterialDesign.git
