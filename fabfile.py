@@ -67,13 +67,14 @@ def helloworld():
     # xdo.send_keysequence_window(win_id, "ctrl+l")
     # xdo.enter_text_window(win_id, 'Python rocks!')
 
-def pyinotifyHelloworld():
+def monAndReload():
     import pyinotify
     from xdo import Xdo
     from pprint import pprint
+    from time import sleep
 
     wm = pyinotify.WatchManager()  # Watch Manager
-    mask = pyinotify.IN_DELETE | pyinotify.IN_CREATE  # watched events
+    mask = pyinotify.IN_DELETE | pyinotify.IN_CREATE | pyinotify.IN_CLOSE_WRITE # watched events
 
 
     xdo = Xdo()
@@ -84,30 +85,52 @@ def pyinotifyHelloworld():
     win_id_chrome = xdo.select_window_with_click()
 
     CWD = os.path.dirname(os.path.abspath(__file__))
+    # CWD = '/home/logic/_workspace/laravel_tryout/app/blog'
 
     def reload_browser(win_id_chrome):
-        print('reloading')
         xdo.activate_window(win_id_chrome)
-        xdo.send_keysequence_window(win_id_chrome, "Esc")
         xdo.send_keysequence_window(win_id_chrome, "ctrl+r")
+        sleep(0.1)
+        xdo.send_keysequence_window_up(win_id_chrome, "ctrl+r")
 
     def back_to_origional(win_id_to_back):
         xdo.activate_window(win_id_to_back)
 
+    def perform_reload(win_id_browser, win_id_editor):
+        from datetime import datetime
+
+        print('reloading %s' % datetime.now().strftime('%s'))
+        reload_browser(win_id_browser)
+        back_to_origional(win_id_editor)
+        for i in range(0,3):
+            xdo.send_keysequence_window(win_id_chrome, "Escape")
+            xdo.send_keysequence_window(win_id_vscode, "Escape")
+
+    class Reload (Exception):
+        pass
+
+
     class EventHandler(pyinotify.ProcessEvent):
 
         def process_IN_CREATE(self, event):
-
-            print "Creating:", event.pathname
-            reload_browser(win_id_chrome)
-            back_to_origional(win_id_vscode)
+            target = os.path.join(event.path, event.name)
+            if os.path.isdir(target):
+                raise Reload()
 
         def process_IN_DELETE(self, event):
-            print "Removing:", event.pathname
+            raise Reload()
+
+        def process_IN_CLOSE_WRITE(self, event):
+            target = os.path.join(event.path, event.name)
+            if target.find('php')> 0:
+                perform_reload(win_id_chrome, win_id_vscode)
+
+    excl_lst = ['']
+    excl = pyinotify.ExcludeFilter(excl_lst)
 
     print('start monitoring')
     handler = EventHandler()
-    notifier = pyinotify.Notifier(wm, handler)
+    notifier = pyinotify.Notifier(wm, handler, read_freq=2)
     wdd = wm.add_watch(CWD, mask, rec=True, auto_add=True)
 
     notifier.loop()
