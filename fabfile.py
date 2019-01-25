@@ -113,12 +113,14 @@ def monAndReload():
     class EventHandler(pyinotify.ProcessEvent):
 
         def process_IN_CREATE(self, event):
-            target = os.path.join(event.path, event.name)
-            if os.path.isdir(target):
-                raise Reload()
+            # target = os.path.join(event.path, event.name)
+            # if os.path.isdir(target):
+            #     raise Reload()
+            pass
 
         def process_IN_DELETE(self, event):
-            raise Reload()
+            # raise Reload()
+            pass
 
         def process_IN_CLOSE_WRITE(self, event):
             target = os.path.join(event.path, event.name)
