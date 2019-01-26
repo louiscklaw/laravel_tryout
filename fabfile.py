@@ -81,7 +81,7 @@ def monAndReload():
     # win_id = xdo.search_windows('.+Chromium.+')
 
     win_id_vscode = xdo.get_active_window()
-    print('click chrome window to get win_id_chrome')
+    print(red('click chrome window to get win_id_chrome'))
     win_id_chrome = xdo.select_window_with_click()
 
     CWD = os.path.dirname(os.path.abspath(__file__))
@@ -92,21 +92,29 @@ def monAndReload():
 
     def reload_browser(win_id_chrome):
         xdo.activate_window(win_id_chrome)
-        xdo.send_keysequence_window(win_id_chrome, get_utf8_string('ctrl+r'))
+        for i in range(0,3):
+            xdo.send_keysequence_window(win_id_chrome, get_utf8_string('Escape'))
+        for i in range(0,3):
+            xdo.send_keysequence_window(win_id_chrome, get_utf8_string('ctrl+r'))
         # xdo.send_keysequence_window_up(win_id_chrome, get_utf8_string('Control_L+r'))
 
     def back_to_origional(win_id_to_back):
         xdo.activate_window(win_id_to_back)
 
+    def clear_holding_key(win_id_browser, win_id_editor):
+        for i in range(0,5):
+            xdo.send_keysequence_window(win_id_browser, get_utf8_string('Escape'))
+            xdo.send_keysequence_window_up(win_id_browser, get_utf8_string('Control_L'))
+            xdo.send_keysequence_window_up(win_id_editor, get_utf8_string('Control_L'))
+
     def perform_reload(win_id_browser, win_id_editor):
         from datetime import datetime
 
-        print('reloading %s' % datetime.now().strftime('%s'))
+        print(green('reloading %s' % datetime.now().strftime('%s')))
         reload_browser(win_id_browser)
         back_to_origional(win_id_editor)
-        for i in range(0,3):
-            xdo.send_keysequence_window(win_id_chrome, get_utf8_string('Escape'))
-
+        clear_holding_key(win_id_browser, win_id_editor)
+        print(green('reload done'))
             # pass
 
     class Reload (Exception):
@@ -132,7 +140,7 @@ def monAndReload():
                     perform_reload(win_id_chrome, win_id_vscode)
                     break
                 else:
-                    print('ignore file change for {}'.format(event.path))
+                    print(yellow('ignore file change for {}'.format(event.path)))
 
     # excl_lst = ['']
     # excl = pyinotify.ExcludeFilter(excl_lst)
@@ -140,7 +148,7 @@ def monAndReload():
     incl_fileext_list=['php','htm']
 
 
-    print('start monitoring')
+    print(green(start monitorings))
     handler = EventHandler()
     notifier = pyinotify.Notifier(wm, handler, read_freq=1)
     wdd = wm.add_watch(CWD, mask, rec=True, auto_add=True)
