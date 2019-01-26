@@ -92,9 +92,8 @@ def monAndReload():
 
     def reload_browser(win_id_chrome):
         xdo.activate_window(win_id_chrome)
-        xdo.send_keysequence_window(win_id_chrome, get_utf8_string('Control_L+r'))
-        xdo.send_keysequence_window_up(win_id_chrome, get_utf8_string('Control_L'))
-        xdo.send_keysequence_window_up(win_id_chrome, get_utf8_string('r'))
+        xdo.send_keysequence_window(win_id_chrome, get_utf8_string('ctrl+r'))
+        # xdo.send_keysequence_window_up(win_id_chrome, get_utf8_string('Control_L+r'))
 
     def back_to_origional(win_id_to_back):
         xdo.activate_window(win_id_to_back)
@@ -105,7 +104,7 @@ def monAndReload():
         print('reloading %s' % datetime.now().strftime('%s'))
         reload_browser(win_id_browser)
         back_to_origional(win_id_editor)
-        for i in range(0,5):
+        for i in range(0,3):
             xdo.send_keysequence_window(win_id_chrome, get_utf8_string('Escape'))
 
             # pass
