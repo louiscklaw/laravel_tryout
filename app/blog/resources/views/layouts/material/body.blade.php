@@ -32,11 +32,15 @@
     </div>
     <!-- #END# Search Bar -->
 
+
     @include('layouts.material.nav')
 
     @include('layouts.material.left_sidebar')
 
-    @extends('layouts.material.content')
-
     @include('layouts.material.scripts_body')
+
+    @include('layouts.material.content')
+
+    @include('layouts.material.body_script')
+
 </body>

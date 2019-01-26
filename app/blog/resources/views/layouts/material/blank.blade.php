@@ -3,6 +3,6 @@
 
 @include('layouts.material.head')
 
-@extends('layouts.material.body')
+@include('layouts.material.body')
 
 </html>
