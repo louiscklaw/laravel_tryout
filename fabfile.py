@@ -148,9 +148,9 @@ def monAndReload():
     incl_fileext_list=['php','htm']
 
 
-    print(green(start monitorings))
+    print(green('start monitoring...'))
     handler = EventHandler()
-    notifier = pyinotify.Notifier(wm, handler, read_freq=1)
+    notifier = pyinotify.Notifier(wm, handler, read_freq=3)
     wdd = wm.add_watch(CWD, mask, rec=True, auto_add=True)
 
     notifier.loop()
