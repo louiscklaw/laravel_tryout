@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # init_py_dont_write_bytecode
 
 #init_boilerplate
@@ -90,7 +90,8 @@ def monAndReload():
     # CWD = '/home/logic/_workspace/laravel_tryout/app/blog'
 
     def get_utf8_string(string):
-        return string.encode('utf-8')
+        # return string.encode('utf-8')
+        return string
 
     def reload_browser(win_id_chrome):
         xdo.activate_window(win_id_chrome)
@@ -98,24 +99,27 @@ def monAndReload():
         for i in range(0,3):
             xdo.send_keysequence_window(win_id_chrome, get_utf8_string('Escape'))
         for i in range(0,3):
-            xdo.send_keysequence_window(win_id_chrome, get_utf8_string('ctrl+r'))
+            sleep(0.01)
+            xdo.send_keysequence_window(win_id_chrome, get_utf8_string('Control_L+r'))
         # xdo.send_keysequence_window_up(win_id_chrome, get_utf8_string('Control_L+r'))
 
-    def back_to_origional(win_id_to_back):
+
+
+    def back_to_original(win_id_to_back):
         xdo.activate_window(win_id_to_back)
 
     def clear_holding_key(win_id_browser, win_id_editor):
         for i in range(0,5):
             xdo.send_keysequence_window(win_id_browser, get_utf8_string('Escape'))
             xdo.send_keysequence_window_up(win_id_browser, get_utf8_string('Control_L'))
-            xdo.send_keysequence_window_up(win_id_editor, get_utf8_string('Control_L'))
+            xdo.send_keysequence_window_up(win_id_editor, get_utf8_string('r'))
 
     def perform_reload(win_id_browser, win_id_editor):
         from datetime import datetime
 
         print(green('reloading %s' % datetime.now().strftime('%s')))
         reload_browser(win_id_browser)
-        back_to_origional(win_id_editor)
+        back_to_original(win_id_editor)
         clear_holding_key(win_id_browser, win_id_editor)
         print(green('reload done'))
             # pass
