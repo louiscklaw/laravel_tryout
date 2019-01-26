@@ -10,13 +10,11 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+include 'test_route.php';
 
 Route::get('/', function () {
     return view('welcome');
 });
-
-
-    include 'test_route.php';
 
 Auth::routes();
 

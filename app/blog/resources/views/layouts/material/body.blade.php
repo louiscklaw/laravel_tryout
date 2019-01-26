@@ -36,7 +36,7 @@
 
     @include('layouts.material.left_sidebar')
 
-    @include('layouts.material.content')
+    @extends('layouts.material.content')
 
     @include('layouts.material.scripts_body')
 </body>

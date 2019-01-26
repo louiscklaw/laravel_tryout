@@ -14,7 +14,10 @@ Route::get('/test', function(){
     }
 });
 
-
 Route::get('/material_home', function(){
     return view('material_home');
+});
+
+Route::get('/test_table', function () {
+    return view('blankpage');
 });
