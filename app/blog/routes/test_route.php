@@ -18,6 +18,6 @@ Route::get('/material_home', function(){
     return view('material_home');
 });
 
-Route::get('/test_table', function () {
+Route::get('/test_blankpage', function () {
     return view('blankpage');
 });

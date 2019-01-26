@@ -104,7 +104,7 @@ class EventHandler(pyinotify.ProcessEvent):
 
 print('start monitoring...')
 handler = EventHandler()
-notifier = pyinotify.Notifier(wm, handler, read_freq=1)
+notifier = pyinotify.Notifier(wm, handler, read_freq=2)
 wdd = wm.add_watch(CWD, mask, rec=True, auto_add=True)
 
 notifier.loop()
