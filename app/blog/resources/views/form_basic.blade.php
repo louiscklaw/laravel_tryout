@@ -32,9 +32,7 @@
                             <div class="row clearfix">
                                 <div class="col-sm-12">
                                     <div class="form-group">
-                                        <div class="form-line">
-                                            <input type="text" class="form-control" placeholder="Username" />
-                                        </div>
+                                            @include('layouts.material.components.text_input')
                                     </div>
                                     <div class="form-group">
                                         <div class="form-line">
@@ -43,7 +41,7 @@
                                     </div>
                                 </div>
                             </div>
-
+<!--
                             <h2 class="card-inside-title">Different Widths</h2>
                             <div class="row clearfix">
                                 <div class="col-sm-6">
@@ -114,7 +112,9 @@
                                     </div>
                                 </div>
                             </div>
+-->
 
+<!--
                             <h2 class="card-inside-title">Different Sizes</h2>
                             <div class="row clearfix">
                                 <div class="col-sm-12">
@@ -135,6 +135,7 @@
                                     </div>
                                 </div>
                             </div>
+-->
 
                             <h2 class="card-inside-title">Floating Label Examples</h2>
                             <div class="row clearfix">
@@ -222,9 +223,7 @@
                             <div class="row clearfix">
                                 <div class="col-sm-12">
                                     <div class="form-group">
-                                        <div class="form-line">
-                                            <textarea rows="4" class="form-control no-resize" placeholder="Please type what you want..."></textarea>
-                                        </div>
+                                        @include('layouts.material.components.textarea_input')
                                     </div>
                                 </div>
                             </div>
