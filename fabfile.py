@@ -29,6 +29,9 @@ def docker_compose_php_composer_install():
 def laravel_artisan_migrate():
     docker_compose_exec("web /bin/sh -c 'cd /app/blog; php artisan migrate'")
 
+def reset_mysql_admin_password():
+    docker_compose_exec('''web bash -c "mysql -uroot --execute=\"use mysql; update user set authentication_string = PASSWORD('admin') where User = 'admin';\""''')
+
 def docker_compose_restart():
     with lcd(DOCKER_DIR):
         local('docker cp ./_settings/000-default.conf laravel-php7:/etc/apache2/sites-available/000-default.conf')
@@ -40,14 +43,13 @@ def laravel_rebuild():
     with lcd(DOCKER_DIR):
         docker_compose_php_composer_install()
         laravel_artisan_migrate()
+        reset_mysql_admin_password()
 
 def rebuild_docker():
     with lcd(DOCKER_DIR):
             local('docker-compose kill')
             local('docker-compose down')
-
             local('docker-compose build')
-
             local('docker-compose up')
 
 @hosts('logic@localhost')
@@ -150,7 +152,7 @@ def monAndReload():
 
     print(green('start monitoring...'))
     handler = EventHandler()
-    notifier = pyinotify.Notifier(wm, handler, read_freq=3)
+    notifier = pyinotify.Notifier(wm, handler, read_freq=1)
     wdd = wm.add_watch(CWD, mask, rec=True, auto_add=True)
 
     notifier.loop()
