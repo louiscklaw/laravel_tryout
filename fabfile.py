@@ -94,6 +94,7 @@ def monAndReload():
 
     def reload_browser(win_id_chrome):
         xdo.activate_window(win_id_chrome)
+        sleep(0.2)
         for i in range(0,3):
             xdo.send_keysequence_window(win_id_chrome, get_utf8_string('Escape'))
         for i in range(0,3):
