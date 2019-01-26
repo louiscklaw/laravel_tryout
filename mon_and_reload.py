@@ -6,9 +6,17 @@ from xdo import Xdo
 from pprint import pprint
 from time import sleep
 
+from datetime import datetime
+
 wm = pyinotify.WatchManager()  # Watch Manager
 mask = pyinotify.IN_DELETE | pyinotify.IN_CREATE | pyinotify.IN_CLOSE_WRITE # watched events
 
+PROJ_HOME = '/home/logic/_workspace/laravel_tryout/app/blog/'
+incl_fileext_list=['php','htm']
+incl_dir_list=[
+    PROJ_HOME+'routes',
+    PROJ_HOME+'resources/views'
+]
 
 xdo = Xdo()
 # win_id = xdo.search_windows('.+Chromium.+')
@@ -19,6 +27,9 @@ win_id_chrome = xdo.select_window_with_click()
 
 CWD = os.path.dirname(os.path.abspath(__file__))
 # CWD = '/home/logic/_workspace/laravel_tryout/app/blog'
+
+def get_target_log_line(string_input):
+    return string_input.replace(PROJ_HOME,'$HOME/')
 
 def get_utf8_string(string):
     # return string
@@ -46,13 +57,10 @@ def clear_holding_key(win_id_browser, win_id_editor):
         xdo.send_keysequence_window_up(win_id_editor, get_utf8_string('r'))
 
 def perform_reload(win_id_browser, win_id_editor):
-    from datetime import datetime
-
-    print('reloading %s' % datetime.now().strftime('%s'))
     reload_browser(win_id_browser)
     back_to_original(win_id_editor)
     clear_holding_key(win_id_browser, win_id_editor)
-    print('reload done')
+
         # pass
 
 class Reload (Exception):
@@ -73,17 +81,25 @@ class EventHandler(pyinotify.ProcessEvent):
 
     def process_IN_CLOSE_WRITE(self, event):
         target = os.path.join(event.path, event.name)
-        for incl_fileext in incl_fileext_list:
-            if target.find(incl_fileext)> 0:
-                perform_reload(win_id_chrome, win_id_vscode)
+        for incl_dir in incl_dir_list:
+            if target.find(incl_dir) >= 0:
+                for incl_fileext in incl_fileext_list:
+                    if target.find(incl_fileext)>= 0:
+                        logline = 'reload triggered for {} reloading {} ... '.format(target, datetime.now().strftime('%s'))
+                        print(get_target_log_line(logline), end='')
+                        perform_reload(win_id_chrome, win_id_vscode)
+                        print(', reload done')
+
+                        break
+                    else:
+                        logline='ignore file change for {}'.format(target)
+                        print(get_target_log_line(log_line))
                 break
             else:
-                print('ignore file change for {}'.format(event.path))
+                pass
 
 # excl_lst = ['']
 # excl = pyinotify.ExcludeFilter(excl_lst)
-
-incl_fileext_list=['php','htm']
 
 
 print('start monitoring...')
