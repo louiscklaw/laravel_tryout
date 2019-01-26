@@ -21,3 +21,7 @@ Route::get('/material_home', function(){
 Route::get('/test_blankpage', function () {
     return view('blankpage');
 });
+
+Route::get('/test_form', function () {
+    return view('form_basic');
+});
