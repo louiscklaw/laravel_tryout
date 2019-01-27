@@ -27,20 +27,26 @@ Route::get('/test_form', function () {
 });
 
 Route::get('/test_menu', function () {
+
     $test_menuitem1=array();
-    $test_menuitem1['name']='test menuitem1';
+    $test_menuitem1['father']=null;
+    $test_menuitem1['name']='Home';
     $test_menuitem1['icon'] = 'content_copy';
 
     $test_menuitem2=array();
-    $test_menuitem2['name']='test menuitem2';
+    $test_menuitem2['father']=null;
+    $test_menuitem2['name']='Typography';
     $test_menuitem2['icon'] = 'content_copy';
 
-
+    $test_menuitem3=array();
+    $test_menuitem3['father']='Typography';
+    $test_menuitem3['name']='Typography1';
+    $test_menuitem3['icon'] = 'content_copy';
 
     return view('form_basic', [
         'active_menu' => 'Typography',
-        'menuitems' => ['menuitem1','menuitem2'],
-        'test_menuitems'=>[$test_menuitem1, $test_menuitem2]
+        'test_menuitems'=>array(
+            $test_menuitem1, $test_menuitem2, $test_menuitem3   )
     ]);
 
 });

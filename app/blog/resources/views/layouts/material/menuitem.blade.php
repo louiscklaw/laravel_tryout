@@ -3,7 +3,8 @@
 <li>
     <a href="pages/typography.html">
         <i class="material-icons">content_copy</i>
-        <span>{{ $test_menuitem['name']}}</span>
+        <span>{{  $test_menuitem['name']  }}</span>
     </a>
+    <!-- find me -->
 </li>
 @endforeach
