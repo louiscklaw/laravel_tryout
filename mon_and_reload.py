@@ -80,6 +80,7 @@ class EventHandler(pyinotify.ProcessEvent):
         pass
 
     def process_IN_CLOSE_WRITE(self, event):
+        sleep(0.5)
         target = os.path.join(event.path, event.name)
         for incl_dir in incl_dir_list:
             if target.find(incl_dir) >= 0:
