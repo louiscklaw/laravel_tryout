@@ -41,8 +41,8 @@ def reload_browser(win_id_chrome):
     xdo.activate_window(win_id_chrome)
 
     sleep(0.1)
-    for i in range(0,3):
-        xdo.send_keysequence_window(win_id_chrome, get_utf8_string('Escape'))
+    xdo.send_keysequence_window_down(win_id_chrome, get_utf8_string('Escape'))
+    xdo.send_keysequence_window_up(win_id_chrome, get_utf8_string('Escape'))
 
     sleep(0.1)
     xdo.send_keysequence_window_down(win_id_chrome, get_utf8_string('Control_L+r'))
