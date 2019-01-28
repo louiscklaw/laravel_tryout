@@ -4,5 +4,5 @@
 
     @include('layouts.material.title')
 
-    @include('layouts.material.link')
+    @include('layouts.material.blank_link')
 </head>

@@ -15,9 +15,6 @@
     <!-- Animation Css -->
     <link href="plugins/animate-css/animate.css" rel="stylesheet" />
 
-    <!-- Morris Chart Css-->
-    <link href="plugins/morrisjs/morris.css" rel="stylesheet" />
-
     <!-- Custom Css -->
     <link href="css/style.css" rel="stylesheet">
 

@@ -38,5 +38,5 @@
 
     @include('layouts.material.content')
 
-    @include('layouts.material.scripts_body')
+    @include('layouts.material.blank_scripts_body')
 </body>
