@@ -38,5 +38,9 @@
 
     @include('layouts.material.content')
 
-    @include('layouts.material.blank_scripts_body')
+
+    @section('blank_scripts_body')
+        @include('layouts.material.blank_scripts_body')
+    @show
+
 </body>
