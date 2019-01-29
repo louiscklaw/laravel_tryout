@@ -30,6 +30,7 @@ class AppServiceProvider extends ServiceProvider
         Blade::component('layouts.components.textarea','textarea');
         Blade::component('layouts.components.autogrowing_textarea','autogrowing_textarea');
 
+        Blade::component('layouts.components.bootstrap_select','bootstrap_select');
     }
 
     /**
