@@ -113,48 +113,27 @@
             @endcard_inside
 
 
+            @card_inside(['card_inside_title'=>'Floating Label Examples'])
+                <div class="row clearfix">
+                    <div class="col-sm-12">
+                        @float_label_input(['form_class'=>'form-float'])
+                            ?? Input
+                        @endfloat_label_input
+                        @float_label_input(['form_class'=>'form-float'])
+                            Large Input
+                        @endfloat_label_input
+
+                        @float_label_input(['form_class'=>'form-float form-group-lg'])
+                            form-float form-group-lg
+                        @endfloat_label_input
+                        @float_label_input(['form_class'=>'form-float form-group-sm'])
+                            form-float form-group-sm
+                        @endfloat_label_input
+                    </div>
+                </div>
+            @endcard_inside
 
 
-
-    <h2 class="card-inside-title">Floating Label Examples</h2>
-    <div class="row clearfix">
-        <div class="col-sm-12">
-            <div class="form-group form-float">
-                <div class="form-line">
-                    <input type="text" class="form-control">
-                    <label class="form-label">Username</label>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-12">
-            <div class="form-group form-float">
-                <div class="form-line">
-                    <input type="password" class="form-control">
-                    <label class="form-label">Password</label>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-12">
-            <div class="form-group form-float form-group-lg">
-                <div class="form-line">
-                    <input type="text" class="form-control">
-                    <label class="form-label">Large Input</label>
-                </div>
-            </div>
-            <div class="form-group form-float">
-                <div class="form-line">
-                    <input type="text" class="form-control">
-                    <label class="form-label">Default Input</label>
-                </div>
-            </div>
-            <div class="form-group form-float form-group-sm">
-                <div class="form-line">
-                    <input type="text" class="form-control">
-                    <label class="form-label">Small Input</label>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <h2 class="card-inside-title">Input Status</h2>
     <div class="row clearfix">

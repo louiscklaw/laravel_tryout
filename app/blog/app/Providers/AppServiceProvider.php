@@ -25,6 +25,7 @@ class AppServiceProvider extends ServiceProvider
 
         Blade::component('layouts.components.card','card');
         Blade::component('layouts.components.card_inside','card_inside');
+        Blade::component('layouts.components.float_label_input','float_label_input');
 
     }
 
