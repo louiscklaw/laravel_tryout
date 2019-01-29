@@ -26,3 +26,7 @@ Route::get('/blank', function(){
 Route::get('/basic_form', function(){
     return view('basic_form');
 });
+
+Route::get('/phpinfo', function(){
+    return view('phpinfo');
+});
