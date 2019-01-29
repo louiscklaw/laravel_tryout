@@ -43,4 +43,5 @@
         @include('layouts.material.blank_scripts_body')
     @show
 
+    @stack('blank_scripts_body')
 </body>

@@ -154,241 +154,36 @@
 
 
 
-        <div class="row clearfix">
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-
-                <div class="card">
-                    <div class="header">
-
-                    @textInput(['form_class'=>''])
-                        test textInput
-                    @endtextInput
-
-                    @textInput(['form_class'=>''])
-                        test textInput
-                    @endtextInput
-
-
-                    @passwordInput
-                        test passwordInput
-                    @endpasswordInput
-
-                        <ul class="header-dropdown m-r--5">
-                            <li class="dropdown">
-                                <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                                    aria-haspopup="true" aria-expanded="false">
-                                    <i class="material-icons">more_vert</i>
-                                </a>
-                                <ul class="dropdown-menu pull-right">
-                                    <li><a href="javascript:void(0);">Action</a></li>
-                                    <li><a href="javascript:void(0);">Another action</a></li>
-                                    <li><a href="javascript:void(0);">Something else here</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-
-
-                    <div class="body">
-
-
-                        <h2 class="card-inside-title">Different Widths</h2>
-                        <div class="row clearfix">
-                            <div class="col-sm-6">`
-                                <div class="form-group">
-                                    <div class="form-line">
-                                        <input type="text" class="form-control" placeholder="col-sm-6" />
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="form-group">
-                                    <div class="form-line">
-                                        <input type="text" class="form-control" placeholder="col-sm-6" />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row clearfix">
-                            <div class="col-sm-4">
-                                <div class="form-group">
-                                    <div class="form-line">
-                                        <input type="text" class="form-control" placeholder="col-sm-4" />
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-4">
-                                <div class="form-group">
-                                    <div class="form-line">
-                                        <input type="text" class="form-control" placeholder="col-sm-4" />
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-4">
-                                <div class="form-group">
-                                    <div class="form-line">
-                                        <input type="text" class="form-control" placeholder="col-sm-4" />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row clearfix">
-                            <div class="col-sm-3">
-                                <div class="form-group">
-                                    <div class="form-line">
-                                        <input type="text" class="form-control" placeholder="col-sm-3" />
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-3">
-                                <div class="form-group">
-                                    <div class="form-line">
-                                        <input type="text" class="form-control" placeholder="col-sm-3" />
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-3">
-                                <div class="form-group">
-                                    <div class="form-line">
-                                        <input type="text" class="form-control" placeholder="col-sm-3" />
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-3">
-                                <div class="form-group">
-                                    <div class="form-line">
-                                        <input type="text" class="form-control" placeholder="col-sm-3" />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <h2 class="card-inside-title">Different Sizes</h2>
-                        <div class="row clearfix">
-                            <div class="col-sm-12">
-                                <div class="form-group form-group-lg">
-                                    <div class="form-line">
-                                        <input type="text" class="form-control" placeholder="Large Input" />
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <div class="form-line">
-                                        <input type="text" class="form-control" placeholder="Default Input" />
-                                    </div>
-                                </div>
-                                <div class="form-group form-group-sm">
-                                    <div class="form-line">
-                                        <input type="text" class="form-control" placeholder="Small Input" />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <h2 class="card-inside-title">Floating Label Examples</h2>
-                        <div class="row clearfix">
-                            <div class="col-sm-12">
-                                <div class="form-group form-float">
-                                    <div class="form-line">
-                                        <input type="text" class="form-control">
-                                        <label class="form-label">Username</label>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-12">
-                                <div class="form-group form-float">
-                                    <div class="form-line">
-                                        <input type="password" class="form-control">
-                                        <label class="form-label">Password</label>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-12">
-                                <div class="form-group form-float form-group-lg">
-                                    <div class="form-line">
-                                        <input type="text" class="form-control" />
-                                        <label class="form-label">Large Input</label>
-                                    </div>
-                                </div>
-                                <div class="form-group form-float">
-                                    <div class="form-line">
-                                        <input type="text" class="form-control" />
-                                        <label class="form-label">Default Input</label>
-                                    </div>
-                                </div>
-                                <div class="form-group form-float form-group-sm">
-                                    <div class="form-line">
-                                        <input type="text" class="form-control" />
-                                        <label class="form-label">Small Input</label>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <h2 class="card-inside-title">Input Status</h2>
-                        <div class="row clearfix">
-                            <div class="col-sm-6">
-                                <div class="form-group">
-                                    <div class="form-line focused">
-                                        <input type="text" class="form-control" value="Focused" placeholder="Statu Focused" />
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="form-group">
-                                    <div class="form-line disabled">
-                                        <input type="text" class="form-control" placeholder="Disabled" disabled />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
         <!-- #END# Input -->
         <!-- Textarea -->
         <div class="row clearfix">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <div class="card">
-                    <div class="header">
-                        <h2>TEXTAREA</h2>
-                        <ul class="header-dropdown m-r--5">
-                            <li class="dropdown">
-                                <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                                    aria-haspopup="true" aria-expanded="false">
-                                    <i class="material-icons">more_vert</i>
-                                </a>
-                                <ul class="dropdown-menu pull-right">
-                                    <li><a href="javascript:void(0);">Action</a></li>
-                                    <li><a href="javascript:void(0);">Another action</a></li>
-                                    <li><a href="javascript:void(0);">Something else here</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="body">
-                        <h2 class="card-inside-title">Basic Example</h2>
-                        <div class="row clearfix">
-                            <div class="col-sm-12">
-                                <div class="form-group">
-                                    <div class="form-line">
-                                        <textarea rows="4" class="form-control no-resize" placeholder="Please type what you want..."></textarea>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                @card([
+                    'card_name'=>'TEXTAREA',
+                    'card_desc'=>'TEXTAREA test'
+                    ])
 
-                        <h2 class="card-inside-title">
-                            Auto Growing Vertical Direction
-                            <small>Taken from <a href="https://github.com/jackmoore/autosize/tree/master" target="_blank">github.com/jackmoore/autosize/tree/master</a></small>
-                        </h2>
-                        <div class="form-group">
-                            <div class="form-line">
-                                <textarea rows="1" class="form-control no-resize auto-growth" placeholder="Please type what you want... And please don't forget the ENTER key press multiple times :)"></textarea>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                    @card_inside(['card_inside_title'=>'Basic Example'])
+                        @textarea
+                            Please type what you want...123
+                        @endtextarea
+
+                    @endcard_inside
+
+                    @card_inside(['card_inside_title'=>'Auto Growing Vertical Direction'])
+                        <small>Taken from github.com/jackmoore/autosize/tree/master</small>
+
+
+                    @autogrowing_textarea
+
+                            Please type what you want... And please don't forget the ENTER key press multiple times :)
+                        @endautogrowing_textarea
+                    @endcard_inside
+
+
+                @endcard
+
+
             </div>
         </div>
         <!-- #END# Textarea -->
