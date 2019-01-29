@@ -133,28 +133,23 @@
                 </div>
             @endcard_inside
 
+            @card_inside(['card_inside_title'=>'Input Status'])
+                <div class="row clearfix">
+                    <div class="col-sm-6">
 
+                        @textInput(['form_class'=>'focused'])
+                            small Input
+                        @endtextInput
+                    </div>
+                    <div class="col-sm-6">
 
-    <h2 class="card-inside-title">Input Status</h2>
-    <div class="row clearfix">
-        <div class="col-sm-6">
-            <div class="form-group">
-                <div class="form-line focused">
-                    <input type="text" class="form-control" value="Focused" placeholder="Statu Focused">
+                        @textInput(['form_class'=>'disabled', 'input_disabled'=>''])
+                            small Input
+                        @endtextInput
+                    </div>
                 </div>
-            </div>
-        </div>
-        <div class="col-sm-6">
-            <div class="form-group">
-                <div class="form-line disabled">
-                    <input type="text" class="form-control" placeholder="Disabled" disabled="">
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-                    @endcard
+            @endcard_inside
+        @endcard
 
 
 
