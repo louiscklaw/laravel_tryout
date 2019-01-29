@@ -14,91 +14,86 @@
             ])
 
 
-        @card_inside(['card_inside_title'=>'basic examples'])
-        <div class="col-sm-12">
-            <div class="form-group">
-                <div class="form-line">
-                    <input type="text" class="form-control" placeholder="Username">
+            @card_inside(['card_inside_title'=>'basic examples'])
+                <div class="row clearfix">
+                    <div class="col-sm-12">
+                        @textInput
+                            test text input
+                        @endtextInput
+                    </div>
+                    <div class="col-sm-12">
+                        @passwordInput
+                            tset password input
+                        @endpasswordInput
+                    </div>
                 </div>
-            </div>
-            <div class="form-group">
-                <div class="form-line">
-                    <input type="password" class="form-control" placeholder="Password">
-                </div>
-            </div>
-        </div>
-        @endcard_inside
+            @endcard_inside
 
-    <h2 class="card-inside-title">Different Widths</h2>
-    <div class="row clearfix">
-        <div class="col-sm-6">
-            <div class="form-group">
-                <div class="form-line">
-                    <input type="text" class="form-control" placeholder="col-sm-6">
+            @card_inside(['card_inside_title'=>'Different Widths'])
+                <div class="row clearfix">
+                    <div class="col-sm-6">
+                        @textInput
+                            hihi col-sm-6
+                        @endtextInput
+
+                    </div>
+                    <div class="col-sm-6">
+                        @textInput
+                            col-sm-6
+                        @endtextInput
+
+                    </div>
                 </div>
-            </div>
-        </div>
-        <div class="col-sm-6">
-            <div class="form-group">
-                <div class="form-line">
-                    <input type="text" class="form-control" placeholder="col-sm-6">
+
+                <div class="row clearfix">
+                    <div class="col-sm-4">
+                        @textInput
+                            hihi col-sm-6
+                        @endtextInput
+
+                    </div>
+                    <div class="col-sm-4">
+                        @textInput
+                            col-sm-6
+                        @endtextInput
+
+                    </div>
+                    <div class="col-sm-4">
+                        @textInput
+                            col-sm-6
+                        @endtextInput
+
+                    </div>
                 </div>
-            </div>
-        </div>
-    </div>
-    <div class="row clearfix">
-        <div class="col-sm-4">
-            <div class="form-group">
-                <div class="form-line">
-                    <input type="text" class="form-control" placeholder="col-sm-4">
+
+                <div class="row clearfix">
+                    <div class="col-sm-3">
+                        @textInput
+                            hihi col-sm-6
+                        @endtextInput
+
+                    </div>
+                    <div class="col-sm-3">
+                        @textInput
+                            col-sm-6
+                        @endtextInput
+
+                    </div>
+                    <div class="col-sm-3">
+                        @textInput
+                            col-sm-6
+                        @endtextInput
+
+                    </div>
+                    <div class="col-sm-3">
+                        @textInput
+                            col-sm-6
+                        @endtextInput
+
+                    </div>
                 </div>
-            </div>
-        </div>
-        <div class="col-sm-4">
-            <div class="form-group">
-                <div class="form-line">
-                    <input type="text" class="form-control" placeholder="col-sm-4">
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-4">
-            <div class="form-group">
-                <div class="form-line">
-                    <input type="text" class="form-control" placeholder="col-sm-4">
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="row clearfix">
-        <div class="col-sm-3">
-            <div class="form-group">
-                <div class="form-line">
-                    <input type="text" class="form-control" placeholder="col-sm-3">
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-3">
-            <div class="form-group">
-                <div class="form-line">
-                    <input type="text" class="form-control" placeholder="col-sm-3">
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-3">
-            <div class="form-group">
-                <div class="form-line">
-                    <input type="text" class="form-control" placeholder="col-sm-3">
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-3">
-            <div class="form-group">
-                <div class="form-line">
-                    <input type="text" class="form-control" placeholder="col-sm-3">
-                </div>
-            </div>
-        </div>
-    </div>
+            @endcard_inside
+
 
     <h2 class="card-inside-title">Different Sizes</h2>
     <div class="row clearfix">
