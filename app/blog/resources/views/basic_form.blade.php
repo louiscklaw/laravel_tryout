@@ -17,7 +17,7 @@
             @card_inside(['card_inside_title'=>'basic examples'])
                 <div class="row clearfix">
                     <div class="col-sm-12">
-                        @textInput
+                        @textInput(['form_class'=>''])
                             test text input
                         @endtextInput
                     </div>
@@ -32,13 +32,13 @@
             @card_inside(['card_inside_title'=>'Different Widths'])
                 <div class="row clearfix">
                     <div class="col-sm-6">
-                        @textInput
+                        @textInput(['form_class'=>''])
                             hihi col-sm-6
                         @endtextInput
 
                     </div>
                     <div class="col-sm-6">
-                        @textInput
+                        @textInput(['form_class'=>''])
                             col-sm-6
                         @endtextInput
 
@@ -47,19 +47,19 @@
 
                 <div class="row clearfix">
                     <div class="col-sm-4">
-                        @textInput
+                        @textInput(['form_class'=>''])
                             hihi col-sm-6
                         @endtextInput
 
                     </div>
                     <div class="col-sm-4">
-                        @textInput
+                        @textInput(['form_class'=>''])
                             col-sm-6
                         @endtextInput
 
                     </div>
                     <div class="col-sm-4">
-                        @textInput
+                        @textInput(['form_class'=>''])
                             col-sm-6
                         @endtextInput
 
@@ -68,25 +68,25 @@
 
                 <div class="row clearfix">
                     <div class="col-sm-3">
-                        @textInput
+                        @textInput(['form_class'=>''])
                             hihi col-sm-6
                         @endtextInput
 
                     </div>
                     <div class="col-sm-3">
-                        @textInput
+                        @textInput(['form_class'=>''])
                             col-sm-6
                         @endtextInput
 
                     </div>
                     <div class="col-sm-3">
-                        @textInput
+                        @textInput(['form_class'=>''])
                             col-sm-6
                         @endtextInput
 
                     </div>
                     <div class="col-sm-3">
-                        @textInput
+                        @textInput(['form_class'=>''])
                             col-sm-6
                         @endtextInput
 
@@ -94,27 +94,27 @@
                 </div>
             @endcard_inside
 
+            @card_inside(['card_inside_title'=>'Different Sizes'])
+                <div class="row clearfix">
+                    <div class="col-sm-12">
+                        @textInput(['form_class'=>'form-group-lg'])
+                            Large Input
+                        @endtextInput
 
-    <h2 class="card-inside-title">Different Sizes</h2>
-    <div class="row clearfix">
-        <div class="col-sm-12">
-            <div class="form-group form-group-lg">
-                <div class="form-line">
-                    <input type="text" class="form-control" placeholder="Large Input">
+                        @textInput(['form_class'=>''])
+                            default
+                        @endtextInput
+
+                        @textInput(['form_class'=>'form-group-sm'])
+                            small Input
+                        @endtextInput
+                    </div>
                 </div>
-            </div>
-            <div class="form-group">
-                <div class="form-line">
-                    <input type="text" class="form-control" placeholder="Default Input">
-                </div>
-            </div>
-            <div class="form-group form-group-sm">
-                <div class="form-line">
-                    <input type="text" class="form-control" placeholder="Small Input">
-                </div>
-            </div>
-        </div>
-    </div>
+            @endcard_inside
+
+
+
+
 
     <h2 class="card-inside-title">Floating Label Examples</h2>
     <div class="row clearfix">
@@ -186,11 +186,11 @@
                 <div class="card">
                     <div class="header">
 
-                    @textInput
+                    @textInput(['form_class'=>''])
                         test textInput
                     @endtextInput
 
-                    @textInput
+                    @textInput(['form_class'=>''])
                         test textInput
                     @endtextInput
 
