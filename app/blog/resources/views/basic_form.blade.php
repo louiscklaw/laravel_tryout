@@ -13,7 +13,6 @@
             'card_desc'=>'testing card description'
             ])
 
-
             @card_inside(['card_inside_title'=>'basic examples'])
                 <div class="row clearfix">
                     <div class="col-sm-12">
