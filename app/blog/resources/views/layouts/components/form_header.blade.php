@@ -1,2 +1,5 @@
 <!-- form_header name -->
-@yield('name')
+<h2>
+                            @yield('name')
+                            <small>@yield('desc')</small>
+                        </h2>

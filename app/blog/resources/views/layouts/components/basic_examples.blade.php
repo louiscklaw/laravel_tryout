@@ -4,8 +4,5 @@
     <div class="col-sm-12">
 
 
-    @include('layouts.components.text_input')
-    @include('layouts.components.password_input')
-
     </div>
 </div>
