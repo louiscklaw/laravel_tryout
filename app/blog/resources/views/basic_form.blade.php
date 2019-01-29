@@ -220,6 +220,43 @@
         <!--Bootstrap Date Picker -->
         <div class="row clearfix">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            @card([
+                    'card_name'=>'DATETIME PICKER',
+                    'card_desc'=>'Taken from github.com/T00rk/bootstrap-material-datetimepicker with momentjs.com
+'
+                    ])
+                    @card_inside(['card_inside_title'=>'test select'])
+                        <div class="row clearfix">
+                            <div class="col-xs-3">
+                                @card_inside(['card_inside_title'=>'Text Input'])
+                                    @bootstrap_datepicker
+                                        Please choose a date...123
+                                    @endbootstrap_datepicker
+                                @endcard_inside
+                            </div>
+                            <div class="col-xs-3">
+                                @card_inside(['card_inside_title'=>'Text Input'])
+                                    @bootstrap_datepicker
+                                        component type not translated
+                                    @endbootstrap_datepicker
+                                @endcard_inside
+                            </div>
+
+                            <div class="col-xs-6">
+                                @card_inside(['card_inside_title'=>'Range'])
+                                    @bootstrap_datepicker_daterange()
+                                        component type not translated
+                                    @endbootstrap_datepicker_daterange
+                                @endcard_inside
+                            </div>
+                        </div>
+                    @endcard_inside
+                @endcard
+            </div>
+        </div>
+
+        <div class="row clearfix">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <div class="card">
                     <div class="header">
                         <h2>
@@ -242,37 +279,7 @@
                     </div>
                     <div class="body">
                         <div class="row clearfix">
-                            <div class="col-xs-3">
-                                <h2 class="card-inside-title">Text Input</h2>
-                                <div class="form-group">
-                                    <div class="form-line" id="bs_datepicker_container">
-                                        <input type="text" class="form-control" placeholder="Please choose a date...">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xs-3">
-                                <h2 class="card-inside-title">Component</h2>
-                                <div class="input-group date" id="bs_datepicker_component_container">
-                                    <div class="form-line">
-                                        <input type="text" class="form-control" placeholder="Please choose a date...">
-                                    </div>
-                                    <span class="input-group-addon">
-                                        <i class="material-icons">date_range</i>
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="col-xs-6">
-                                <h2 class="card-inside-title">Range</h2>
-                                <div class="input-daterange input-group" id="bs_datepicker_range_container">
-                                    <div class="form-line">
-                                        <input type="text" class="form-control" placeholder="Date start...">
-                                    </div>
-                                    <span class="input-group-addon">to</span>
-                                    <div class="form-line">
-                                        <input type="text" class="form-control" placeholder="Date end...">
-                                    </div>
-                                </div>
-                            </div>
+
                         </div>
                     </div>
                 </div>

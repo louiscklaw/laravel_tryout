@@ -31,6 +31,8 @@ class AppServiceProvider extends ServiceProvider
         Blade::component('layouts.components.autogrowing_textarea','autogrowing_textarea');
 
         Blade::component('layouts.components.bootstrap_select','bootstrap_select');
+        Blade::component('layouts.components.bootstrap_datepicker','bootstrap_datepicker');
+        Blade::component('layouts.components.bootstrap_datepicker_daterange','bootstrap_datepicker_daterange');
     }
 
     /**
