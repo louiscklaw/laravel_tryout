@@ -276,6 +276,34 @@
         <!-- Checkbox -->
         <div class="row clearfix">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                @card([
+                    'card_name'=>'CHECKBOX',
+                    'card_desc'=>'Taken from github.com/T00rk/bootstrap-material-datetimepicker with momentjs.com
+'
+                    ])
+                    @card_inside(['card_inside_title'=>'test checkbox'])
+                        <div class="demo-checkbox">
+                            @checkbox(['checkbox_id'=>'checkbox1','checked'=>''])
+                                checkbox label
+                            @endcheckbox
+                            @checkbox(['checkbox_id'=>'checkbox2','checked'=>'', 'filled_in'=>''])
+                                Filled In
+                            @endcheckbox
+
+                            @checkbox(['checkbox_id'=>'checkbox3','checked'=>'', 'disabled'=>''])
+                                Default - Disabled
+                            @endcheckbox
+                            @checkbox(['checkbox_id'=>'checkbox4','checked'=>'', 'filled_in'=>'', 'disabled'=>''])
+                                Filled In - Disabled
+                            @endcheckbox
+                        </div>
+                    @endcard_inside
+                @endcard
+
+            </div>
+        </div>
+        <div class="row clearfix">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <div class="card">
                     <div class="header">
                         <h2>
