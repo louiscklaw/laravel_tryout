@@ -384,6 +384,83 @@
 
                     @card_inside(['card_inside_title'=>'With Material Design Colors'])
                         <div class="demo-checkbox">
+                        @checkbox(['checkbox_id'=>'chk-col-pink','checked'=>'','chk_color'=>'chk-col-pink', 'filled_in'=>''])
+                            chk-col-pink - Filled
+                        @endcheckbox
+
+                        @checkbox(['checkbox_id'=>'chk-col-purple','checked'=>'','chk_color'=>'chk-col-purple', 'filled_in'=>''])
+                            chk-col-purple - Filled
+                        @endcheckbox
+
+                        @checkbox(['checkbox_id'=>'chk-col-deep-purple','checked'=>'','chk_color'=>'chk-col-deep-purple', 'filled_in'=>''])
+                            chk-col-deep-purple - Filled
+                        @endcheckbox
+
+                        @checkbox(['checkbox_id'=>'chk-col-indigo','checked'=>'','chk_color'=>'chk-col-indigo', 'filled_in'=>''])
+                            chk-col-indigo - Filled
+                        @endcheckbox
+
+                        @checkbox(['checkbox_id'=>'chk-col-blue','checked'=>'','chk_color'=>'chk-col-blue', 'filled_in'=>''])
+                            chk-col-blue - Filled
+                        @endcheckbox
+
+                        @checkbox(['checkbox_id'=>'chk-col-light-blue','checked'=>'','chk_color'=>'chk-col-light-blue', 'filled_in'=>''])
+                            chk-col-light-blue - Filled
+                        @endcheckbox
+
+                        @checkbox(['checkbox_id'=>'chk-col-cyan','checked'=>'','chk_color'=>'chk-col-cyan', 'filled_in'=>''])
+                            chk-col-cyan - Filled
+                        @endcheckbox
+
+                        @checkbox(['checkbox_id'=>'chk-col-teal','checked'=>'','chk_color'=>'chk-col-teal', 'filled_in'=>''])
+                            chk-col-teal - Filled
+                        @endcheckbox
+
+                        @checkbox(['checkbox_id'=>'chk-col-green','checked'=>'','chk_color'=>'chk-col-green', 'filled_in'=>''])
+                            chk-col-green - Filled
+                        @endcheckbox
+
+                        @checkbox(['checkbox_id'=>'chk-col-light-green','checked'=>'','chk_color'=>'chk-col-light-green', 'filled_in'=>''])
+                            chk-col-light-green - Filled
+                        @endcheckbox
+
+                        @checkbox(['checkbox_id'=>'chk-col-lime','checked'=>'','chk_color'=>'chk-col-lime', 'filled_in'=>''])
+                            chk-col-lime - Filled
+                        @endcheckbox
+
+                        @checkbox(['checkbox_id'=>'chk-col-yellow','checked'=>'','chk_color'=>'chk-col-yellow', 'filled_in'=>''])
+                            chk-col-yellow - Filled
+                        @endcheckbox
+
+                        @checkbox(['checkbox_id'=>'chk-col-amber','checked'=>'','chk_color'=>'chk-col-amber', 'filled_in'=>''])
+                            chk-col-amber - Filled
+                        @endcheckbox
+
+                        @checkbox(['checkbox_id'=>'chk-col-orange','checked'=>'','chk_color'=>'chk-col-orange', 'filled_in'=>''])
+                            chk-col-orange - Filled
+                        @endcheckbox
+
+                        @checkbox(['checkbox_id'=>'chk-col-deep-orange','checked'=>'','chk_color'=>'chk-col-deep-orange', 'filled_in'=>''])
+                            chk-col-deep-orange - Filled
+                        @endcheckbox
+
+                        @checkbox(['checkbox_id'=>'chk-col-brown','checked'=>'','chk_color'=>'chk-col-brown', 'filled_in'=>''])
+                            chk-col-brown - Filled
+                        @endcheckbox
+
+                        @checkbox(['checkbox_id'=>'chk-col-grey','checked'=>'','chk_color'=>'chk-col-grey', 'filled_in'=>''])
+                            chk-col-grey - Filled
+                        @endcheckbox
+
+                        @checkbox(['checkbox_id'=>'chk-col-blue-grey','checked'=>'','chk_color'=>'chk-col-blue-grey', 'filled_in'=>''])
+                            chk-col-blue-grey - Filled
+                        @endcheckbox
+
+                        @checkbox(['checkbox_id'=>'chk-col-black','checked'=>'','chk_color'=>'chk-col-black', 'filled_in'=>''])
+                            chk-col-black - Filled
+                        @endcheckbox
+
+
 
                         </div>
                     @endcard_inside
