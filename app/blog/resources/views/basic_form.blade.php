@@ -470,6 +470,139 @@
         <!-- Radio -->
         <div class="row clearfix">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                @card([
+                    'card_name'=>'CHECKBOX',
+                    'card_desc'=>'Taken from github.com/T00rk/bootstrap-material-datetimepicker with momentjs.com'
+                    ])
+                    @card_inside(['card_inside_title'=>'test checkbox'])
+                        <div class="demo-radio-button">
+                        @radio(['radio_group'=>'1','radio_id'=>'radio_id_1'])
+                            radio_slot_text
+                        @endradio
+
+                        @radio(['radio_group'=>'1','radio_id'=>'radio_id_2'])
+                            radio_slot_text
+                        @endradio
+
+                        @radio(['radio_group'=>'1','radio_id'=>'radio_id_3','with_gap'=>''])
+                            radio_slot_text
+                        @endradio
+
+                        @radio(['radio_group'=>'1','radio_id'=>'radio_id_4','with_gap'=>''])
+                            radio_slot_text
+                        @endradio
+
+                        @radio(['radio_group'=>'2',
+                            'radio_id'=>'radio_id_4',
+                            'with_gap'=>'',
+                            'checked'=>'','disabled'=>''
+                            ])
+                            radio_slot_text
+                        @endradio
+                        </div>
+                    @endcard_inside
+                @endcard
+
+                @card([
+                    'card_name'=>'RADIO',
+                    'card_desc'=>'Taken from github.com/T00rk/bootstrap-material-datetimepicker with momentjs.com'
+                    ])
+                    @card_inside([
+                        'card_inside_title'=>'With Material Design Colors',
+                        'card_inside_desc'=>'<small>You can use material design colors which examples are .radio-col-pink, .radio-col-cyan class</small>'
+                        ])
+
+                    <div class="demo-radio-button">
+                    @radio(['radio_group'=>'3','radio_id'=>'radio-col-red','radio_col'=>'radio-col-red'])
+                        radio-col-red
+                    @endradio
+
+
+                    @radio(['radio_group'=>'3','radio_id'=>'radio-col-pink','radio_col'=>'radio-col-pink'])
+                        radio-col-pink
+                    @endradio
+
+                    @radio(['radio_group'=>'3','radio_id'=>'radio-col-purple','radio_col'=>'radio-col-purple'])
+                        radio-col-purple
+                    @endradio
+
+                    @radio(['radio_group'=>'3','radio_id'=>'radio-col-deep-purple','radio_col'=>'radio-col-deep-purple'])
+                        radio-col-deep-purple
+                    @endradio
+
+                    @radio(['radio_group'=>'3','radio_id'=>'radio-col-indigo','radio_col'=>'radio-col-indigo'])
+                        radio-col-indigo
+                    @endradio
+
+                    @radio(['radio_group'=>'3','radio_id'=>'radio-col-blue','radio_col'=>'radio-col-blue'])
+                        radio-col-blue
+                    @endradio
+
+                    @radio(['radio_group'=>'3','radio_id'=>'radio-col-light-blue','radio_col'=>'radio-col-light-blue'])
+                        radio-col-light-blue
+                    @endradio
+
+                    @radio(['radio_group'=>'3','radio_id'=>'radio-col-cyan','radio_col'=>'radio-col-cyan'])
+                        radio-col-cyan
+                    @endradio
+
+                    @radio(['radio_group'=>'3','radio_id'=>'radio-col-teal','radio_col'=>'radio-col-teal'])
+                        radio-col-teal
+                    @endradio
+
+                    @radio(['radio_group'=>'3','radio_id'=>'radio-col-green','radio_col'=>'radio-col-green'])
+                        radio-col-green
+                    @endradio
+
+                    @radio(['radio_group'=>'3','radio_id'=>'radio-col-light-green','radio_col'=>'radio-col-light-green'])
+                        radio-col-light-green
+                    @endradio
+
+                    @radio(['radio_group'=>'3','radio_id'=>'radio-col-lime','radio_col'=>'radio-col-lime'])
+                        radio-col-lime
+                    @endradio
+
+                    @radio(['radio_group'=>'3','radio_id'=>'radio-col-yellow','radio_col'=>'radio-col-yellow'])
+                        radio-col-yellow
+                    @endradio
+
+                    @radio(['radio_group'=>'3','radio_id'=>'radio-col-amber','radio_col'=>'radio-col-amber'])
+                        radio-col-amber
+                    @endradio
+
+                    @radio(['radio_group'=>'3','radio_id'=>'radio-col-orange','radio_col'=>'radio-col-orange'])
+                        radio-col-orange
+                    @endradio
+
+                    @radio(['radio_group'=>'3','radio_id'=>'radio-col-deep-orange','radio_col'=>'radio-col-deep-orange'])
+                        radio-col-deep-orange
+                    @endradio
+
+                    @radio(['radio_group'=>'3','radio_id'=>'radio-col-brown','radio_col'=>'radio-col-brown'])
+                        radio-col-brown
+                    @endradio
+
+                    @radio(['radio_group'=>'3','radio_id'=>'radio-col-grey','radio_col'=>'radio-col-grey'])
+                        radio-col-grey
+                    @endradio
+
+                    @radio(['radio_group'=>'3','radio_id'=>'radio-col-blue-grey','radio_col'=>'radio-col-blue-grey'])
+                        radio-col-blue-grey
+                    @endradio
+
+                    @radio(['radio_group'=>'3','radio_id'=>'radio-col-black','radio_col'=>'radio-col-black'])
+                        radio-col-black
+                    @endradio
+
+                    </div>
+
+                    @endcard_inside
+                @endcard
+
+            </div>
+        </div>
+        <div class="row clearfix">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <div class="card">
                     <div class="header">
                         <h2>
@@ -491,21 +624,6 @@
                         </ul>
                     </div>
                     <div class="body">
-                        <h2 class="card-inside-title">Basic Examples</h2>
-                        <div class="demo-radio-button">
-                            <input name="group1" type="radio" id="radio_1" checked />
-                            <label for="radio_1">Radio - 1</label>
-                            <input name="group1" type="radio" id="radio_2" />
-                            <label for="radio_2">Radio - 2</label>
-                            <input name="group1" type="radio" class="with-gap" id="radio_3" />
-                            <label for="radio_3">Radio - With Gap</label>
-                            <input name="group1" type="radio" id="radio_4" class="with-gap" />
-                            <label for="radio_4">Radio - With Gap</label>
-                            <input name="group2" type="radio" id="radio_5" checked disabled />
-                            <label for="radio_5">Radio - Disabled</label>
-                            <input name="group3" type="radio" id="radio_6" class="with-gap" checked disabled />
-                            <label for="radio_6">Radio - Disabled</label>
-                        </div>
 
                         <h2 class="card-inside-title">
                             With Material Design Colors
