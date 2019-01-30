@@ -459,9 +459,6 @@
                         @checkbox(['checkbox_id'=>'chk-col-black','checked'=>'','chk_color'=>'chk-col-black', 'filled_in'=>''])
                             chk-col-black - Filled
                         @endcheckbox
-
-
-
                         </div>
                     @endcard_inside
 
@@ -469,120 +466,7 @@
 
             </div>
         </div>
-        <div class="row clearfix">
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <div class="card">
-                    <div class="header">
-                        <h2>
-                            CHECKBOX
-                            <small>Taken from <a href="http://materializecss.com/" target="_blank">materializecss.com</a></small>
-                        </h2>
-                        <ul class="header-dropdown m-r--5">
-                            <li class="dropdown">
-                                <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                                    aria-haspopup="true" aria-expanded="false">
-                                    <i class="material-icons">more_vert</i>
-                                </a>
-                                <ul class="dropdown-menu pull-right">
-                                    <li><a href="javascript:void(0);">Action</a></li>
-                                    <li><a href="javascript:void(0);">Another action</a></li>
-                                    <li><a href="javascript:void(0);">Something else here</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="body">
-                        <h2 class="card-inside-title">With Material Design Colors</h2>
-                        <div class="demo-checkbox">
-                            <input type="checkbox" id="md_checkbox_1" class="chk-col-red" checked />
-                            <label for="md_checkbox_1">RED</label>
-                            <input type="checkbox" id="md_checkbox_2" class="chk-col-pink" checked />
-                            <label for="md_checkbox_2">PINK</label>
-                            <input type="checkbox" id="md_checkbox_3" class="chk-col-purple" checked />
-                            <label for="md_checkbox_3">PURPLE</label>
-                            <input type="checkbox" id="md_checkbox_4" class="chk-col-deep-purple" checked />
-                            <label for="md_checkbox_4">DEEP PURPLE</label>
-                            <input type="checkbox" id="md_checkbox_5" class="chk-col-indigo" checked />
-                            <label for="md_checkbox_5">INDIGO</label>
-                            <input type="checkbox" id="md_checkbox_6" class="chk-col-blue" checked />
-                            <label for="md_checkbox_6">BLUE</label>
-                            <input type="checkbox" id="md_checkbox_7" class="chk-col-light-blue" checked />
-                            <label for="md_checkbox_7">LIGHT BLUE</label>
-                            <input type="checkbox" id="md_checkbox_8" class="chk-col-cyan" checked />
-                            <label for="md_checkbox_8">CYAN</label>
-                            <input type="checkbox" id="md_checkbox_9" class="chk-col-teal" checked />
-                            <label for="md_checkbox_9">TEAL</label>
-                            <input type="checkbox" id="md_checkbox_10" class="chk-col-green" checked />
-                            <label for="md_checkbox_10">GREEN</label>
-                            <input type="checkbox" id="md_checkbox_11" class="chk-col-light-green" checked />
-                            <label for="md_checkbox_11">LIGHT GREEN</label>
-                            <input type="checkbox" id="md_checkbox_12" class="chk-col-lime" checked />
-                            <label for="md_checkbox_12">LIME</label>
-                            <input type="checkbox" id="md_checkbox_13" class="chk-col-yellow" checked />
-                            <label for="md_checkbox_13">YELLOW</label>
-                            <input type="checkbox" id="md_checkbox_14" class="chk-col-amber" checked />
-                            <label for="md_checkbox_14">AMBER</label>
-                            <input type="checkbox" id="md_checkbox_15" class="chk-col-orange" checked />
-                            <label for="md_checkbox_15">ORANGE</label>
-                            <input type="checkbox" id="md_checkbox_16" class="chk-col-deep-orange" checked />
-                            <label for="md_checkbox_16">DEEP ORANGE</label>
-                            <input type="checkbox" id="md_checkbox_17" class="chk-col-brown" checked />
-                            <label for="md_checkbox_17">BROWN</label>
-                            <input type="checkbox" id="md_checkbox_18" class="chk-col-grey" checked />
-                            <label for="md_checkbox_18">GREY</label>
-                            <input type="checkbox" id="md_checkbox_19" class="chk-col-blue-grey" checked />
-                            <label for="md_checkbox_19">BLUE GREY</label>
-                            <input type="checkbox" id="md_checkbox_20" class="chk-col-black" checked />
-                            <label for="md_checkbox_20">BLACK</label>
-                        </div>
 
-                        <h2 class="card-inside-title">With Material Design Colors - Filled In</h2>
-                        <div class="demo-checkbox">
-                            <input type="checkbox" id="md_checkbox_21" class="filled-in chk-col-red" checked />
-                            <label for="md_checkbox_21">RED</label>
-                            <input type="checkbox" id="md_checkbox_22" class="filled-in chk-col-pink" checked />
-                            <label for="md_checkbox_22">PINK</label>
-                            <input type="checkbox" id="md_checkbox_23" class="filled-in chk-col-purple" checked />
-                            <label for="md_checkbox_23">PURPLE</label>
-                            <input type="checkbox" id="md_checkbox_24" class="filled-in chk-col-deep-purple" checked />
-                            <label for="md_checkbox_24">DEEP PURPLE</label>
-                            <input type="checkbox" id="md_checkbox_25" class="filled-in chk-col-indigo" checked />
-                            <label for="md_checkbox_25">INDIGO</label>
-                            <input type="checkbox" id="md_checkbox_26" class="filled-in chk-col-blue" checked />
-                            <label for="md_checkbox_26">BLUE</label>
-                            <input type="checkbox" id="md_checkbox_27" class="filled-in chk-col-light-blue" checked />
-                            <label for="md_checkbox_27">LIGHT BLUE</label>
-                            <input type="checkbox" id="md_checkbox_28" class="filled-in chk-col-cyan" checked />
-                            <label for="md_checkbox_28">CYAN</label>
-                            <input type="checkbox" id="md_checkbox_29" class="filled-in chk-col-teal" checked />
-                            <label for="md_checkbox_29">TEAL</label>
-                            <input type="checkbox" id="md_checkbox_30" class="filled-in chk-col-green" checked />
-                            <label for="md_checkbox_30">GREEN</label>
-                            <input type="checkbox" id="md_checkbox_31" class="filled-in chk-col-light-green" checked />
-                            <label for="md_checkbox_31">LIGHT GREEN</label>
-                            <input type="checkbox" id="md_checkbox_32" class="filled-in chk-col-lime" checked />
-                            <label for="md_checkbox_32">LIME</label>
-                            <input type="checkbox" id="md_checkbox_33" class="filled-in chk-col-yellow" checked />
-                            <label for="md_checkbox_33">YELLOW</label>
-                            <input type="checkbox" id="md_checkbox_34" class="filled-in chk-col-amber" checked />
-                            <label for="md_checkbox_34">AMBER</label>
-                            <input type="checkbox" id="md_checkbox_35" class="filled-in chk-col-orange" checked />
-                            <label for="md_checkbox_35">ORANGE</label>
-                            <input type="checkbox" id="md_checkbox_36" class="filled-in chk-col-deep-orange" checked />
-                            <label for="md_checkbox_36">DEEP ORANGE</label>
-                            <input type="checkbox" id="md_checkbox_37" class="filled-in chk-col-brown" checked />
-                            <label for="md_checkbox_37">BROWN</label>
-                            <input type="checkbox" id="md_checkbox_38" class="filled-in chk-col-grey" checked />
-                            <label for="md_checkbox_38">GREY</label>
-                            <input type="checkbox" id="md_checkbox_39" class="filled-in chk-col-blue-grey" checked />
-                            <label for="md_checkbox_39">BLUE GREY</label>
-                            <input type="checkbox" id="md_checkbox_40" class="filled-in chk-col-black" checked />
-                            <label for="md_checkbox_40">BLACK</label>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
         <!-- #END# Checkbox -->
         <!-- Radio -->
         <div class="row clearfix">
