@@ -471,10 +471,10 @@
         <div class="row clearfix">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 @card([
-                    'card_name'=>'CHECKBOX',
+                    'card_name'=>'radio',
                     'card_desc'=>'Taken from github.com/T00rk/bootstrap-material-datetimepicker with momentjs.com'
                     ])
-                    @card_inside(['card_inside_title'=>'test checkbox'])
+                    @card_inside(['card_inside_title'=>'test radio'])
                         <div class="demo-radio-button">
                         @radio(['radio_group'=>'1','radio_id'=>'radio_id_1'])
                             radio_slot_text
@@ -601,128 +601,7 @@
 
             </div>
         </div>
-        <div class="row clearfix">
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <div class="card">
-                    <div class="header">
-                        <h2>
-                            RADIO
-                            <small>Taken from <a href="http://materializecss.com/" target="_blank">materializecss.com</a></small>
-                        </h2>
-                        <ul class="header-dropdown m-r--5">
-                            <li class="dropdown">
-                                <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                                    aria-haspopup="true" aria-expanded="false">
-                                    <i class="material-icons">more_vert</i>
-                                </a>
-                                <ul class="dropdown-menu pull-right">
-                                    <li><a href="javascript:void(0);">Action</a></li>
-                                    <li><a href="javascript:void(0);">Another action</a></li>
-                                    <li><a href="javascript:void(0);">Something else here</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="body">
 
-                        <h2 class="card-inside-title">
-                            With Material Design Colors
-                            <small>You can use material design colors which examples are <code>.radio-col-pink,
-                                    .radio-col-cyan</code> class</small>
-                        </h2>
-                        <div class="demo-radio-button">
-                            <input name="group4" type="radio" id="radio_7" class="radio-col-red" checked />
-                            <label for="radio_7">RED</label>
-                            <input name="group4" type="radio" id="radio_8" class="radio-col-pink" />
-                            <label for="radio_8">PINK</label>
-                            <input name="group4" type="radio" id="radio_9" class="radio-col-purple" />
-                            <label for="radio_9">PURPLE</label>
-                            <input name="group4" type="radio" id="radio_10" class="radio-col-deep-purple" />
-                            <label for="radio_10">DEEP PURPLE</label>
-                            <input name="group4" type="radio" id="radio_11" class="radio-col-indigo" />
-                            <label for="radio_11">INDIGO</label>
-                            <input name="group4" type="radio" id="radio_12" class="radio-col-blue" />
-                            <label for="radio_12">BLUE</label>
-                            <input name="group4" type="radio" id="radio_13" class="radio-col-light-blue" />
-                            <label for="radio_13">LIGHT BLUE</label>
-                            <input name="group4" type="radio" id="radio_14" class="radio-col-cyan" />
-                            <label for="radio_14">CYAN</label>
-                            <input name="group4" type="radio" id="radio_15" class="radio-col-teal" />
-                            <label for="radio_15">TEAL</label>
-                            <input name="group4" type="radio" id="radio_16" class="radio-col-green" />
-                            <label for="radio_16">GREEN</label>
-                            <input name="group4" type="radio" id="radio_17" class="radio-col-light-green" />
-                            <label for="radio_17">LIGHT GREEN</label>
-                            <input name="group4" type="radio" id="radio_18" class="radio-col-lime" />
-                            <label for="radio_18">LIME</label>
-                            <input name="group4" type="radio" id="radio_19" class="radio-col-yellow" />
-                            <label for="radio_19">YELLOW</label>
-                            <input name="group4" type="radio" id="radio_20" class="radio-col-amber" />
-                            <label for="radio_20">AMBER</label>
-                            <input name="group4" type="radio" id="radio_21" class="radio-col-orange" />
-                            <label for="radio_21">ORANGE</label>
-                            <input name="group4" type="radio" id="radio_22" class="radio-col-deep-orange" />
-                            <label for="radio_22">DEEP ORANGE</label>
-                            <input name="group4" type="radio" id="radio_23" class="radio-col-brown" />
-                            <label for="radio_23">BROWN</label>
-                            <input name="group4" type="radio" id="radio_24" class="radio-col-grey" />
-                            <label for="radio_24">GREY</label>
-                            <input name="group4" type="radio" id="radio_25" class="radio-col-blue-grey" />
-                            <label for="radio_25">BLUE GREY</label>
-                            <input name="group4" type="radio" id="radio_26" class="radio-col-black" />
-                            <label for="radio_26">BLACK</label>
-                        </div>
-
-                        <h2 class="card-inside-title">
-                            With Material Design Colors - With Gap
-                            <small>Add to <code>.with-gap</code> class</small>
-                        </h2>
-                        <div class="demo-radio-button">
-                            <input name="group5" type="radio" id="radio_30" class="with-gap radio-col-red" checked />
-                            <label for="radio_30">RED</label>
-                            <input name="group5" type="radio" id="radio_31" class="with-gap radio-col-pink" />
-                            <label for="radio_31">PINK</label>
-                            <input name="group5" type="radio" id="radio_32" class="with-gap radio-col-purple" />
-                            <label for="radio_32">PURPLE</label>
-                            <input name="group5" type="radio" id="radio_33" class="with-gap radio-col-deep-purple" />
-                            <label for="radio_33">DEEP PURPLE</label>
-                            <input name="group5" type="radio" id="radio_34" class="with-gap radio-col-indigo" />
-                            <label for="radio_34">INDIGO</label>
-                            <input name="group5" type="radio" id="radio_35" class="with-gap radio-col-blue" />
-                            <label for="radio_35">BLUE</label>
-                            <input name="group5" type="radio" id="radio_36" class="with-gap radio-col-light-blue" />
-                            <label for="radio_36">LIGHT BLUE</label>
-                            <input name="group5" type="radio" id="radio_37" class="with-gap radio-col-cyan" />
-                            <label for="radio_37">CYAN</label>
-                            <input name="group5" type="radio" id="radio_38" class="with-gap radio-col-teal" />
-                            <label for="radio_38">TEAL</label>
-                            <input name="group5" type="radio" id="radio_39" class="with-gap radio-col-green" />
-                            <label for="radio_39">GREEN</label>
-                            <input name="group5" type="radio" id="radio_40" class="with-gap radio-col-light-green" />
-                            <label for="radio_40">LIGHT GREEN</label>
-                            <input name="group5" type="radio" id="radio_41" class="with-gap radio-col-lime" />
-                            <label for="radio_41">LIME</label>
-                            <input name="group5" type="radio" id="radio_42" class="with-gap radio-col-yellow" />
-                            <label for="radio_42">YELLOW</label>
-                            <input name="group5" type="radio" id="radio_43" class="with-gap radio-col-amber" />
-                            <label for="radio_43">AMBER</label>
-                            <input name="group5" type="radio" id="radio_44" class="with-gap radio-col-orange" />
-                            <label for="radio_44">ORANGE</label>
-                            <input name="group5" type="radio" id="radio_45" class="with-gap radio-col-deep-orange" />
-                            <label for="radio_45">DEEP ORANGE</label>
-                            <input name="group5" type="radio" id="radio_46" class="with-gap radio-col-brown" />
-                            <label for="radio_46">BROWN</label>
-                            <input name="group5" type="radio" id="radio_47" class="with-gap radio-col-grey" />
-                            <label for="radio_47">GREY</label>
-                            <input name="group5" type="radio" id="radio_48" class="with-gap radio-col-blue-grey" />
-                            <label for="radio_48">BLUE GREY</label>
-                            <input name="group5" type="radio" id="radio_49" class="with-gap radio-col-black" />
-                            <label for="radio_49">BLACK</label>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
         <!-- #END# Radio -->
         <!-- Switch Button -->
         <div class="row clearfix">
