@@ -278,8 +278,7 @@
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 @card([
                     'card_name'=>'CHECKBOX',
-                    'card_desc'=>'Taken from github.com/T00rk/bootstrap-material-datetimepicker with momentjs.com
-'
+                    'card_desc'=>'Taken from github.com/T00rk/bootstrap-material-datetimepicker with momentjs.com'
                     ])
                     @card_inside(['card_inside_title'=>'test checkbox'])
                         <div class="demo-checkbox">
