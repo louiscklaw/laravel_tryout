@@ -606,168 +606,187 @@
         <!-- Switch Button -->
         <div class="row clearfix">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <div class="card">
-                    <div class="header">
-                        <h2>
-                            SWITCH BUTTON
-                            <small>Taken from <a href="http://materializecss.com/" target="_blank">materializecss.com</a></small>
-                        </h2>
-                        <ul class="header-dropdown m-r--5">
-                            <li class="dropdown">
-                                <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                                    aria-haspopup="true" aria-expanded="false">
-                                    <i class="material-icons">more_vert</i>
-                                </a>
-                                <ul class="dropdown-menu pull-right">
-                                    <li><a href="javascript:void(0);">Action</a></li>
-                                    <li><a href="javascript:void(0);">Another action</a></li>
-                                    <li><a href="javascript:void(0);">Something else here</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="body">
-                        <h2 class="card-inside-title">Basic Examples</h2>
+                @card([
+                    'card_name'=>'radio',
+                    'card_desc'=>'Taken from github.com/T00rk/bootstrap-material-datetimepicker with momentjs.com'
+                    ])
+                    @card_inside(['card_inside_title'=>'test radio'])
                         <div class="demo-switch">
-                            <div class="switch">
-                                <label>OFF<input type="checkbox" checked><span class="lever"></span>ON</label>
-                            </div>
-                            <div class="switch">
-                                <label>DISABLED<input type="checkbox" disabled><span class="lever"></span></label>
-                            </div>
+                            @switch(['checked'=>'','off_text'=>'off','on_text'=>'on'])
+                                normal
+                            @endswitch
+                            @switch(['checked'=>'','off_text'=>'off','on_text'=>'on', 'disabled'=>''])
+                                disabled - on
+                            @endswitch
+                            @switch(['off_text'=>'off','on_text'=>'on', 'disabled'=>''])
+                                disabled - off
+                            @endswitch
+                        </div>
+                    @endcard_inside
+                @endcard
+            </div>
+        </div>
+        <div class="row clearfix">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                @card([
+                'card_name'=>'radio',
+                'card_desc'=>'Taken from github.com/T00rk/bootstrap-material-datetimepicker with momentjs.com'
+                ])
+                @card_inside(['card_inside_title'=>'test radio'])
+                <div class="demo-switch">
+                    <div class="row clearfix">
+                        <div class="col-sm-3">
+                            @switch(['checked'=>'', 'off_text'=>'off','on_text'=>'on', 'switch_color'=>'switch-col-red'])
+                            switch-col-red
+                            @endswitch
+                        </div>
+                        <div class="col-sm-3">
+                            @switch(['checked'=>'', 'off_text'=>'off','on_text'=>'on', 'switch_color'=>'switch-col-pink'])
+                            switch-col-pink
+                            @endswitch
                         </div>
 
-                        <h2 class="card-inside-title">
-                            With Material Design Colors
-                            <small>You can use material design colors which examples are <code>.switch-col-pink,
-                                    .switch-col-teal</code> class</small>
-                        </h2>
-                        <div class="demo-switch">
-                            <div class="row clearfix">
-                                <div class="col-sm-3">
-                                    <div class="demo-switch-title">RED</div>
-                                    <div class="switch">
-                                        <label><input type="checkbox" checked><span class="lever switch-col-red"></span></label>
-                                    </div>
-                                </div>
-                                <div class="col-sm-3">
-                                    <div class="demo-switch-title">PINK</div>
-                                    <div class="switch">
-                                        <label><input type="checkbox" checked><span class="lever switch-col-pink"></span></label>
-                                    </div>
-                                </div>
-                                <div class="col-sm-3">
-                                    <div class="demo-switch-title">PURPLE</div>
-                                    <div class="switch">
-                                        <label><input type="checkbox" checked><span class="lever switch-col-purple"></span></label>
-                                    </div>
-                                </div>
-                                <div class="col-sm-3">
-                                    <div class="demo-switch-title">DEEP PURPLE</div>
-                                    <div class="switch">
-                                        <label><input type="checkbox" checked><span class="lever switch-col-deep-purple"></span></label>
-                                    </div>
-                                </div>
-                                <div class="col-sm-3">
-                                    <div class="demo-switch-title">INDIGO</div>
-                                    <div class="switch">
-                                        <label><input type="checkbox" checked><span class="lever switch-col-indigo"></span></label>
-                                    </div>
-                                </div>
-                                <div class="col-sm-3">
-                                    <div class="demo-switch-title">BLUE</div>
-                                    <div class="switch">
-                                        <label><input type="checkbox" checked><span class="lever switch-col-blue"></span></label>
-                                    </div>
-                                </div>
-                                <div class="col-sm-3">
-                                    <div class="demo-switch-title">LIGHT BLUE</div>
-                                    <div class="switch">
-                                        <label><input type="checkbox" checked><span class="lever switch-col-light-blue"></span></label>
-                                    </div>
-                                </div>
-                                <div class="col-sm-3">
-                                    <div class="demo-switch-title">CYAN</div>
-                                    <div class="switch">
-                                        <label><input type="checkbox" checked><span class="lever switch-col-cyan"></span></label>
-                                    </div>
-                                </div>
-                                <div class="col-sm-3">
-                                    <div class="demo-switch-title">TEAL</div>
-                                    <div class="switch">
-                                        <label><input type="checkbox" checked><span class="lever switch-col-teal"></span></label>
-                                    </div>
-                                </div>
-                                <div class="col-sm-3">
-                                    <div class="demo-switch-title">GREEN</div>
-                                    <div class="switch">
-                                        <label><input type="checkbox" checked><span class="lever switch-col-green"></span></label>
-                                    </div>
-                                </div>
-                                <div class="col-sm-3">
-                                    <div class="demo-switch-title">LIGHT GREEN</div>
-                                    <div class="switch">
-                                        <label><input type="checkbox" checked><span class="lever switch-col-light-green"></span></label>
-                                    </div>
-                                </div>
-                                <div class="col-sm-3">
-                                    <div class="demo-switch-title">LIME</div>
-                                    <div class="switch">
-                                        <label><input type="checkbox" checked><span class="lever switch-col-lime"></span></label>
-                                    </div>
-                                </div>
-                                <div class="col-sm-3">
-                                    <div class="demo-switch-title">YELLOW</div>
-                                    <div class="switch">
-                                        <label><input type="checkbox" checked><span class="lever switch-col-yellow"></span></label>
-                                    </div>
-                                </div>
-                                <div class="col-sm-3">
-                                    <div class="demo-switch-title">AMBER</div>
-                                    <div class="switch">
-                                        <label><input type="checkbox" checked><span class="lever switch-col-amber"></span></label>
-                                    </div>
-                                </div>
-                                <div class="col-sm-3">
-                                    <div class="demo-switch-title">ORANGE</div>
-                                    <div class="switch">
-                                        <label><input type="checkbox" checked><span class="lever switch-col-orange"></span></label>
-                                    </div>
-                                </div>
-                                <div class="col-sm-3">
-                                    <div class="demo-switch-title">DEEP ORANGE</div>
-                                    <div class="switch">
-                                        <label><input type="checkbox" checked><span class="lever switch-col-deep-orange"></span></label>
-                                    </div>
-                                </div>
-                                <div class="col-sm-3">
-                                    <div class="demo-switch-title">BROWN</div>
-                                    <div class="switch">
-                                        <label><input type="checkbox" checked><span class="lever switch-col-brown"></span></label>
-                                    </div>
-                                </div>
-                                <div class="col-sm-3">
-                                    <div class="demo-switch-title">GREY</div>
-                                    <div class="switch">
-                                        <label><input type="checkbox" checked><span class="lever switch-col-grey"></span></label>
-                                    </div>
-                                </div>
-                                <div class="col-sm-3">
-                                    <div class="demo-switch-title">BLUE GREY</div>
-                                    <div class="switch">
-                                        <label><input type="checkbox" checked><span class="lever switch-col-blue-grey"></span></label>
-                                    </div>
-                                </div>
-                                <div class="col-sm-3">
-                                    <div class="demo-switch-title">BLACK</div>
-                                    <div class="switch">
-                                        <label><input type="checkbox" checked><span class="lever switch-col-black"></span></label>
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="col-sm-3">
+                            @switch(['checked'=>'', 'off_text'=>'off','on_text'=>'on', 'switch_color'=>'switch-col-purple'])
+                            switch-col-purple
+                            @endswitch
+                        </div>
+
+
+                        <div class="col-sm-3">
+                            @switch(['checked'=>'','off_text'=>'off','on_text'=>'on',
+                            'switch_color'=>'switch-col-deep-purple'])
+                            switch-col-deep-purple
+                            @endswitch
+                        </div>
+
+                    </div>
+                    <div class="row clearfix">
+                        <div class="col-sm-3">
+                            @switch(['checked'=>'','off_text'=>'off','on_text'=>'on', 'switch_color'=>'switch-col-indigo'])
+                            switch-col-indigo
+                            @endswitch
+                        </div>
+
+
+                        <div class="col-sm-3">
+                            @switch(['checked'=>'','off_text'=>'off','on_text'=>'on', 'switch_color'=>'switch-col-blue'])
+                            switch-col-blue
+                            @endswitch
+                        </div>
+
+
+                        <div class="col-sm-3">
+                            @switch(['checked'=>'','off_text'=>'off','on_text'=>'on', 'switch_color'=>'switch-col-light-blue'])
+                            switch-col-light-blue
+                            @endswitch
+                        </div>
+
+
+                        <div class="col-sm-3">
+                            @switch(['checked'=>'','off_text'=>'off','on_text'=>'on', 'switch_color'=>'switch-col-cyan'])
+                            switch-col-cyan
+                            @endswitch
+                        </div>
+
+
+                    </div>
+                    <div class="row clearfix">
+
+
+                        <div class="col-sm-3">
+                            @switch(['checked'=>'','off_text'=>'off','on_text'=>'on', 'switch_color'=>'switch-col-teal'])
+                            switch-col-teal
+                            @endswitch
+                        </div>
+
+
+                        <div class="col-sm-3">
+                            @switch(['checked'=>'','off_text'=>'off','on_text'=>'on', 'switch_color'=>'switch-col-green'])
+                            switch-col-green
+                            @endswitch
+                        </div>
+
+
+                        <div class="col-sm-3">
+                            @switch(['checked'=>'','off_text'=>'off','on_text'=>'on',
+                            'switch_color'=>'switch-col-light-green'])
+                            switch-col-light-green
+                            @endswitch
+                        </div>
+
+
+                        <div class="col-sm-3">
+                            @switch(['checked'=>'','off_text'=>'off','on_text'=>'on', 'switch_color'=>'switch-col-lime'])
+                            switch-col-lime
+                            @endswitch
+                        </div>
+
+
+                    </div>
+                    <div class="row clearfix">
+
+                        <div class="col-sm-3">
+                            @switch(['checked'=>'','off_text'=>'off','on_text'=>'on', 'switch_color'=>'switch-col-yellow'])
+                            switch-col-yellow
+                            @endswitch
+                        </div>
+
+
+                        <div class="col-sm-3">
+                            @switch(['checked'=>'','off_text'=>'off','on_text'=>'on', 'switch_color'=>'switch-col-amber'])
+                            switch-col-amber
+                            @endswitch
+                        </div>
+
+
+                        <div class="col-sm-3">
+                            @switch(['checked'=>'','off_text'=>'off','on_text'=>'on', 'switch_color'=>'switch-col-orange'])
+                            switch-col-orange
+                            @endswitch
+                        </div>
+
+
+                        <div class="col-sm-3">
+                            @switch(['checked'=>'','off_text'=>'off','on_text'=>'on',
+                            'switch_color'=>'switch-col-deep-orange'])
+                            switch-col-deep-orange
+                            @endswitch
+                        </div>
+
+
+                    </div>
+                    <div class="row clearfix">
+                        <div class="col-sm-3">
+                            @switch(['checked'=>'','off_text'=>'off','on_text'=>'on', 'switch_color'=>'switch-col-brown'])
+                            switch-col-brown
+                            @endswitch
+                        </div>
+
+
+                        <div class="col-sm-3">
+                            @switch(['checked'=>'','off_text'=>'off','on_text'=>'on', 'switch_color'=>'switch-col-grey'])
+                            switch-col-grey
+                            @endswitch
+                        </div>
+
+
+                        <div class="col-sm-3">
+                            @switch(['checked'=>'','off_text'=>'off','on_text'=>'on', 'switch_color'=>'switch-col-blue-grey'])
+                            switch-col-blue-grey
+                            @endswitch
+                        </div>
+
+
+                        <div class="col-sm-3">
+                            @switch(['checked'=>'','off_text'=>'off','on_text'=>'on', 'switch_color'=>'switch-col-black'])
+                            switch-col-black
+                            @endswitch
                         </div>
                     </div>
                 </div>
+                @endcard_inside
+                @endcard
             </div>
         </div>
         <!--#END# Switch Button -->
