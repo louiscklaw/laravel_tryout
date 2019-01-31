@@ -80,8 +80,7 @@ def monAndTest():
         def process_IN_CLOSE_WRITE(self, event):
             target = os.path.join(event.path, event.name)
             for incl_fileext in incl_fileext_list:
-                # if target.find(incl_fileext)> 0:
-                if True:
+                if target.find(incl_fileext)> 0:
                     perform_test()
                     break
                 else:
