@@ -7,6 +7,7 @@ from fabric.context_managers import *
 from fabric.contrib.project import *
 
 CWD = os.path.dirname(__file__)
+APP_DIR = '/'.join([CWD, 'app'])
 DOCKER_DIR = os.path.join(CWD,'_docker')
 
 XDOTOOL_RELOAD_SH='''WID=`xdotool search --name "Material Design - Mozilla Firefox" | head -1`; xdotool windowactivate $WID; xdotool key F5'''
@@ -97,3 +98,10 @@ def monAndTest():
     wdd = wm.add_watch(CWD, mask, rec=True, auto_add=True)
 
     notifier.loop()
+
+
+def laravel_new(proj_name):
+    with lcd(APP_DIR):
+        local('composer create-project --prefer-dist laravel/laravel %s' % APP_DIR)
+        with lcd('/'.join([APPDIR,proj_name])):
+            local('php artisan key:generate')
